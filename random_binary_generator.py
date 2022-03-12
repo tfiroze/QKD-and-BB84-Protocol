@@ -1,12 +1,9 @@
+#function to make random polarizers 
 import random
-
-
-def bin_str(n):
-    bin = ""
-    for i in range(n):
-        temp = str(random.randint(0, 1))
-        bin += temp
-    return bin
+def polar(temp):
+    #two possible polarizers + or x defined as p and x respectively
+    mylist = [0, 1]
+    return random.choices(mylist, weights = [1, 1], k = temp)
 #   example
 #   n=8
 #   out = bin_str(n)
