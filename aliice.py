@@ -1,11 +1,11 @@
 import polarizer
 import random_binary_generator
 
-basis=polarizer.polar(32)
-alicebin=random_binary_generator.polar(32)
+basis=polarizer.polar(100)
+alicebin=random_binary_generator.polar(100)
 alicephot=[0]*len(alicebin)
 def basfun():
-    for i in range(0,32):
+    for i in range(0,100):
         if(alicebin[i]==0 and basis[i]=='p'):
             alicephot[i]='v'
         elif(alicebin[i]==0 and basis[i]=='x'):
@@ -18,5 +18,9 @@ def basfun():
             print('error')
     return alicephot
 #print(alicebin)                  #binary key stream
+#print(len(alicebin))
 #print(basis)                     #random basis chosen by alice
+#print(len(basis))
+#basfun()
 #print(alicephot)                 #photons sent by alice through polarizer to bob
+#print(len(alicephot))                 #photons sent by alice through polarizer to bob

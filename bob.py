@@ -2,11 +2,11 @@ from aliice import basfun
 import polarizer
 import random
 import aliice
-bobpolar=polarizer.polar(32)
+bobpolar=polarizer.polar(100)
 alicephot=aliice.basfun()
 keyarray=[0]*len(alicephot)
 def keyarfun():
-    for i in range(0,32):
+    for i in range(0,100):
         if(bobpolar[i]=='p' and alicephot[i]=='v'):
             keyarray[i]=0
         elif(bobpolar[i]=='p' and alicephot[i]=='h'):
