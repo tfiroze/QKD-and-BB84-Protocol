@@ -1,9 +1,9 @@
-from aliice import basfun
+from alice import basfun
 import polarizer
 import random
-import aliice
+import alice
 bobpolar=polarizer.polar(100)
-alicephot=aliice.basfun()
+alicephot=alice.basfun()
 keyarray=[0]*len(alicephot)
 def keyarfun():
     for i in range(0,100):
