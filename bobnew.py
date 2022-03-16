@@ -16,3 +16,13 @@ def finalar():
     #print("Quantum key distribution key is ",bindata)
     return bindata
 asd=finalar()
+temp=[0]*len(asd)
+for i in range(0,len(asd)):
+    temp[i]=str(asd[i])
+str1 = "" 
+# traverse in the string  
+for ele in temp: 
+    str1 += ele
+cat=int(str1)
+
+print(cat)
