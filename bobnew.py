@@ -1,5 +1,6 @@
 import alicenew
 import keypolarizer
+import compare
 bindata=[0]*len(alicenew.alicenewphot)
 def finalar():
     for i in range(0,len(alicenew.alicenewphot)):
@@ -24,5 +25,5 @@ str1 = ""
 for ele in temp: 
     str1 += ele
 cat=int(str1)
-
+print(compare.key)
 print(cat)

@@ -4,9 +4,9 @@ res = ''.join(format(ord(i), '08b') for i in data)
 temp=[0]*len(res)
 for i in range(0,len(res)):
     temp[i]=int(res[i])
-send=keypolarizer.key
+send=keypolarizer.keypol
 send.extend(temp)
-send.extend(keypolarizer.key)
+send.extend(keypolarizer.keypol)
 #print(len(send))
 #print(send)
 #print(keypolarizer.newpol)
