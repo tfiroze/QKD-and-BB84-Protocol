@@ -4,10 +4,10 @@ res = ''.join(format(ord(i), '08b') for i in data)
 temp=[0]*len(res)
 for i in range(0,len(res)):
     temp[i]=int(res[i])
-send=keypolarizer.keypol
+print(temp)
+send=keypolarizer.keypol.copy()
 send.extend(temp)
 send.extend(keypolarizer.keypol)
-#print(len(send))
 #print(send)
 #print(keypolarizer.newpol)
 alicenewphot=[0]*len(send)
