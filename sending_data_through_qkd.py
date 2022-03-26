@@ -1,15 +1,17 @@
 import keypolarizer
-text="hey there"
+text="THIS IS A LONG MESSAGE BEING SENT THROUGH QKD"
+print("The text to be sent is ",text)
 data=[char for char in text]
-#print(data)
+print("Here the text that is being is sent is seperated to single characters giving us the list = ",data)
 out=''
 emp=[0]*len(data)
-#print(data)
+
 for i in range(0,len(data)):
     temp=data[i]
     res = ''.join(format(ord(i), '08b') for i in temp)
     emp[i]=res
-#print(emp)
+print("Now each character is concerted into the binary equivalent of their ascii value for transmission which can be seen here = ")
+print(emp)
 for i in range(0,len(emp)):
     send=([char for char in emp[i]])
     alicenewphot=[0]*len(send)
@@ -27,7 +29,7 @@ for i in range(0,len(emp)):
                 print(send[i])
         return(alicenewphot)
     newsend()
-    #print(alicenewphot)
+    print("This is the stream of photons being sent for each of the characters",alicenewphot)
     bindata=[0]*len(alicenewphot)
     def finalar():
         for i in range(0,len(alicenewphot)):
@@ -41,10 +43,9 @@ for i in range(0,len(emp)):
                 bindata[i]=1
             else:
                 print("Error in transmission")
-        #print("Quantum key distribution key is ",bindata)
         return bindata
     finalar()
-    #print(bindata)
+    print("This is the binary data recived after being sent through the polarizers",bindata)
 
     s = [str(i) for i in bindata]
         
@@ -64,5 +65,5 @@ for i in range(0,len(emp)):
     
     out= out + chr(decimal_data)
     
-print(out)
+print("This is the text recived after QKD ",out)
 
