@@ -1,8 +1,9 @@
 import keypolarizer
-text="THIS IS A LONG MESSAGE BEING SENT THROUGH QKD"
-print("The text to be sent is ",text)
+text=input("Hey, enter your message to be sent : ")
+#text="THIS IS A LONG MESSAGE BEING SENT THROUGH QKD"
+print("\nThe text to be sent is \n",text)
 data=[char for char in text]
-print("Here the text that is being is sent is seperated to single characters giving us the list = ",data)
+print("\nHere the text that is being sent is seperated into single characters giving us the list = \n",data)
 out=''
 emp=[0]*len(data)
 
@@ -10,8 +11,10 @@ for i in range(0,len(data)):
     temp=data[i]
     res = ''.join(format(ord(i), '08b') for i in temp)
     emp[i]=res
-print("Now each character is concerted into the binary equivalent of their ascii value for transmission which can be seen here = ")
+print("\nNow each character is converted into the binary equivalent of their ascii value for transmission which can be seen here = \n")
 print(emp)
+print("\nAfter intial QKD Alice and Bob form a 16 bit Key which is :\n",keypolarizer.keypol)
+print("\nThis key is used by Alice and Bob to produce a set of identical polarisers which is of very large length in order to allow seamless transfer of data\n")
 for i in range(0,len(emp)):
     send=([char for char in emp[i]])
     alicenewphot=[0]*len(send)
@@ -29,7 +32,7 @@ for i in range(0,len(emp)):
                 print(send[i])
         return(alicenewphot)
     newsend()
-    print("This is the stream of photons being sent for each of the characters",alicenewphot)
+    print("\nThis is the stream of photons being sent for each of the characters\n",alicenewphot)
     bindata=[0]*len(alicenewphot)
     def finalar():
         for i in range(0,len(alicenewphot)):
@@ -45,7 +48,7 @@ for i in range(0,len(emp)):
                 print("Error in transmission")
         return bindata
     finalar()
-    print("This is the binary data recived after being sent through the polarizers",bindata)
+    print("\nThis is the binary data recived after being sent through the polarizers\n",bindata)
 
     s = [str(i) for i in bindata]
         
@@ -65,5 +68,6 @@ for i in range(0,len(emp)):
     
     out= out + chr(decimal_data)
     
-print("This is the text recived after QKD ",out)
+print("\nThis is the text recived after QKD \n")
+print(out)
 
