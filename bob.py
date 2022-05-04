@@ -25,12 +25,9 @@ def keyarfun():
             keyarray[i]=1
         else:
             print("Error in transmission")
-    #print("Quantum key distribution key is ",keyarray)
     return keyarray
-#for i in range(0,8):
-#print(bobpolar)
-#print(alicephot)
-#print(keyarray)
+#print("\nThis are the basis used by bob\n",bobpolar)
+#print("\nThis is the stream of binary data recieved by bob\n",keyarfun())
 
 
         

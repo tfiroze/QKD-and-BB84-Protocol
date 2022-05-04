@@ -8,4 +8,3 @@ for i in range(0,16):
         newpol[i]='x'
 for i in range(0,20):
     newpol.extend(newpol)    
-#print(len(newpol))

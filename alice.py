@@ -17,10 +17,6 @@ def basfun():
         else:
             print('error')
     return alicephot
-#print(alicebin)                  #binary key stream
-#print(len(alicebin))
-#print(basis)                     #random basis chosen by alice
-#print(len(basis))
-#basfun()
-#print(alicephot)                 #photons sent by alice through polarizer to bob
-#print(len(alicephot))                 #photons sent by alice through polarizer to bob
+#print("\nThis is the stream of binary data\n",alicebin)
+#print("\nThese are the basis used by alice\n",basis)
+#print("\nThis is the stream of photons sent by alice\n",basfun())

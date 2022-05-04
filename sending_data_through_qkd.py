@@ -1,6 +1,5 @@
 import keypolarizer
 text=input("Hey, enter your message to be sent : ")
-#text="THIS IS A LONG MESSAGE BEING SENT THROUGH QKD"
 print("\nThe text to be sent is \n",text)
 data=[char for char in text]
 print("\nHere the text that is being sent is seperated into single characters giving us the list = \n",data)
@@ -51,8 +50,6 @@ for i in range(0,len(emp)):
     print("\nThis is the binary data recived after being sent through the polarizers\n",bindata)
 
     s = [str(i) for i in bindata]
-        
-        # Join list items using join()
     res = int("".join(s))
     def BinaryToDecimal(binary):
             
@@ -70,4 +67,3 @@ for i in range(0,len(emp)):
     
 print("\nThis is the text recived after QKD \n")
 print(out)
-

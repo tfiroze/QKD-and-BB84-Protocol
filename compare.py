@@ -9,5 +9,4 @@ while(i!=16):
         if(arr[i]==alice.alicebin[i]):
             key[i]=alice.alicebin[i]            
     i=i+1
-#print(key)
-#print(len(key))
+print("\nThis is the 16 digit key\n",key)
