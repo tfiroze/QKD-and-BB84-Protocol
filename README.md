@@ -1,5 +1,8 @@
 # Quantum Key Distribution
 
+## Introduction
+This repo consists of a python demonstration of the BB84 protocol of Quantum Key Distribution. 
+
 ## Basis
 ![basis](https://user-images.githubusercontent.com/73216889/156981566-216ca292-047a-4865-942b-dd73ee2a3a46.PNG)
 
