@@ -1,14 +1,21 @@
-# Quantum Key Distribution
+# Quantum Key Distribution (QKD)
 
-## Introduction
-This repo consists of a python demonstration of the BB84 protocol of Quantum Key Distribution. 
+This code demonstrates a basic implementation of Quantum Key Distribution (QKD) using the keypolarizer module. QKD is a method of securely distributing a secret key between two parties, typically called Alice and Bob, using the principles of quantum mechanics.
 
-## Basis
-![basis](https://user-images.githubusercontent.com/73216889/156981566-216ca292-047a-4865-942b-dd73ee2a3a46.PNG)
+## Getting Started
 
-## Transmission of initial key
-![ex qkd](https://user-images.githubusercontent.com/73216889/156981602-01d1c06c-7422-4bc3-a3f0-e9cb31d012e3.PNG)
+The code prompts the user to enter a message to be sent. The message is then separated into individual characters and converted into their binary equivalent for transmission. The keypolarizer module is used to generate a 16-bit key shared by Alice and Bob, which is then used to produce a set of identical polarizers. The binary data is then sent through these polarizers, and the resulting stream of photons is used to reconstruct the original binary data on the receiving end. The binary data is then converted back to its original text form.
 
-## Eavesdropping by Eve
-![eve](https://user-images.githubusercontent.com/73216889/156982430-de45aee6-728e-4294-902a-963d18258ea0.PNG)
+## Prerequisites
+
+- Python 3
+
+## Running the code
+
+To run the code, simply run the script using python command in your terminal.
+
+## Output
+
+The code will output the original message entered by the user, the list of individual characters of the message, the binary equivalent of each character, the stream of photons being sent for each character, the binary data received after being sent through the polarizers, and the final text message received after QKD.
+
 
